@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <b>Enter a word: </b>
       <WordInput setWord={setWord} />
-
+      <hr/>
       <ReversedWord
         word={word}
         setRev={setRev}
@@ -25,6 +25,7 @@ function App() {
         setWord={setWord}
         setList={setList}
       />
+      <hr/>
       <b>Reversed words List:</b>
       <ReverseList list={list} clearList={clearList} />
     </div>

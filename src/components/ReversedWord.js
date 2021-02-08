@@ -15,11 +15,14 @@ function ReversedWord({ word, setList, setWord, list }) {
   }, [word]);
   return (
     <div>
-      <b>Reversed word: {rev} </b><br />
+      <b>Reversed word: {rev} </b>
+      <br />
       <button
         onClick={() => {
-          setList([...list, rev]);
-          setWord("");
+          if (rev) {
+            setList([...list, rev]);
+            setWord("");
+          }
         }}
       >
         Add
