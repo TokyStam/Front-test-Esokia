@@ -12,12 +12,11 @@ function App() {
     setList([]);
   };
 
-  const addList = () => {};
   return (
     <div className="App">
       <b>Enter a word: </b>
-      <WordInput setWord={setWord} />
-      <hr/>
+      <WordInput word={word} setWord={setWord} />
+      <hr />
       <ReversedWord
         word={word}
         setRev={setRev}
@@ -25,7 +24,7 @@ function App() {
         setWord={setWord}
         setList={setList}
       />
-      <hr/>
+      <hr />
       <b>Reversed words List:</b>
       <ReverseList list={list} clearList={clearList} />
     </div>

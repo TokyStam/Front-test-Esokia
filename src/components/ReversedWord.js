@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 function ReversedWord({ word, setList, setWord, list }) {
   const [rev, setRev] = useState("");
   const reverseWord = () => {
-    console.log({ word });
     let splitw = word.split("");
     let reversw = splitw.reverse();
     let joinw = reversw.join("");
