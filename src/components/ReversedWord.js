@@ -12,20 +12,18 @@ function ReversedWord({ word, setList, setWord, list }) {
   useEffect(() => {
     reverseWord();
   }, [word]);
+
+  const onAdd = () => {
+    if (rev) {
+      setList([...list, rev]);
+      setWord("");
+    }
+  };
   return (
     <div>
       <b>Reversed word: {rev} </b>
       <br />
-      <button
-        onClick={() => {
-          if (rev) {
-            setList([...list, rev]);
-            setWord("");
-          }
-        }}
-      >
-        Add
-      </button>
+      <button onClick={onAdd}>Add</button>
     </div>
   );
 }
